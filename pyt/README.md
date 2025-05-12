@@ -1,1 +1,1 @@
-innovative crypto-game
+First social cripto curency, integrated with telegram bot: https://t.me/taalc_bot
