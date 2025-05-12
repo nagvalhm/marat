@@ -1,1 +1,1 @@
-# TAALC
+First social cripto curency, integrated with ai-telegram bot: https://t.me/taalc_bot
