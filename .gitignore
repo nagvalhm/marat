@@ -7,6 +7,7 @@ pyt/sandbox.py
 config_test/
 config/
 pyt/pyconfig.ini
+pyt/dist
 
 sql
 pyt1/env310
