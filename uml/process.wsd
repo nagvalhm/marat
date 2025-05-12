@@ -1,0 +1,34 @@
+start
+    while(Bot process)
+        :receive_all_currencies (-> List[exchange_price_dict]);
+        'for
+        'instead of receive_all_currencies,
+        ' :receive_currency -> exchange_price_dict;
+        
+        while(currencies in list)
+        ':process_currency:
+            :Bot sort exchange_price_dict;
+            :count spread(%);
+            'fees:
+            'на покупку - только коммисия биржи
+            'на продажу - коммисия биржи + комиссия за заем
+            'при переводе - комиссия сети + комиссия на вывод
+            :count commission_buy - exchange, sum, currency;
+            :count commission_sell - ;
+            :count commision_transfer - ;
+            :count commision_total;
+            if (spread - commision_total > some_count) then (continue) 
+
+            else (execute)              
+                if (Bot is traiding) then (buy)
+                    :execute transaction;
+                else(stats)
+                    :send statistic;
+                endif
+                    
+
+            endif
+        endwhile
+    endwhile
+    
+end

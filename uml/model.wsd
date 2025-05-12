@@ -1,0 +1,33 @@
+class Worker{
+    start()
+    execute()
+    stop()
+    action()
+}
+
+class ArbitrageBot{}
+
+class TradingBot{}
+
+class StatisticBot{}
+
+class TelegramBot{
+    init_user_chat()
+    trade()
+    stats()
+    message_handler()
+}
+
+class SystemService{
+    install()
+}
+class WinService{}
+class LinuxService{}
+
+SystemService <|-- WinService
+SystemService <|-- LinuxService
+
+Worker <|-- ArbitrageBot
+    ArbitrageBot <|-- TradingBot
+    ArbitrageBot <|-- StatisticBot
+Worker <|-- TlgBot

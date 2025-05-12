@@ -7,6 +7,15 @@
     "configurations": [
 
         {
+            "name": "telegram debug",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/pyt/TAALC/app.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+
+        {
             "name": "pytest",
             "type": "python",
             "request": "launch",
