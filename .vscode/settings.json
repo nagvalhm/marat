@@ -1,7 +1,7 @@
 {
     // "python.pythonPath": "${workspaceFolder}/pyt1/env310/Scripts/python.exe",
     "python_path": "${workspaceFolder}/pyt/env310/Scripts/python.exe",
-    "cwd": "${workspaceFolder}/pyt",
+    // "cwd": "${workspaceFolder}/pyt",
     "files.watcherExclude": {
         "**/target": true
     },
