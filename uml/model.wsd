@@ -5,18 +5,36 @@ class Worker{
     action()
 }
 
-class ArbitrageBot{}
-
-class TradingBot{}
-
-class StatisticBot{}
 
 class TelegramBot{
     init_user_chat()
-    trade()
-    stats()
     message_handler()
 }
+
+class Transaction{
+    transaction_batch
+    from
+    to
+    token
+    transaction_time
+}
+
+class TransactionBatch{}
+
+class TokensBag{
+    user
+    List[Token]
+}
+
+class Wallet{
+    user
+    currency
+    amount
+}
+
+class Token{}
+class Currency{}
+class NFT{}
 
 class SystemService{
     install()
@@ -27,7 +45,11 @@ class LinuxService{}
 SystemService <|-- WinService
 SystemService <|-- LinuxService
 
-Worker <|-- ArbitrageBot
-    ArbitrageBot <|-- TradingBot
-    ArbitrageBot <|-- StatisticBot
-Worker <|-- TlgBot
+Token <|-- Currency
+Token <|-- NFT
+
+Wallet -up-> Currency
+Transaction --> TransactionBatch
+Transaction --> Currency
+
+Wallet <|-- TokensBag
