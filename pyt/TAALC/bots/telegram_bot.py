@@ -3,7 +3,7 @@ from aiogram import Bot, Dispatcher, types, Router
 # from asyncio import sleep, ensure_future, create_task
 # from .statistic_bot import StatisticBot
 # from .trading_bot import TradingBot
-from epure.files import IniFile
+# from epure.files import IniFile
 from aiogram.filters.command import Command, CommandStart
 from aiogram.filters import IS_MEMBER, IS_NOT_MEMBER, ChatMemberUpdatedFilter, JOIN_TRANSITION
 from argparse import ArgumentParser
@@ -15,9 +15,9 @@ class TelegramBot(Worker):
     bot_token:str
     bot:Bot
     dsp:Dispatcher
-    config:IniFile
+    config:object
 
-    def __init__(self, config:IniFile):
+    def __init__(self, config:object):
         self.bot_token = config.bot_token
         self.config = config
         self.bot = Bot(self.bot_token)        

@@ -145,3 +145,4 @@ sql/.dbeaver
 epure_db.log
 sql/db_lite/sqlite3.def
 sql/db_lite/sqlite3.dll
+/.vscode

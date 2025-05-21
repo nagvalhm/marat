@@ -1,0 +1,11 @@
+[Unit]
+Description=Your Python Module as a Service
+After=network.target
+
+[Service]
+User=root
+ExecStart=/root/env/bin/python -m TAALC --token 797378:dsfkjhhkjfhgjksgkj
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
