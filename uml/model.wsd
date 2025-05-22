@@ -26,13 +26,25 @@ class TokensBag{
     List[Token]
 }
 
+class User{
+
+}
+
+class Member{
+    telegram_id
+}
+
 class Wallet{
-    user
+    member
     currency
     amount
 }
 
-class Token{}
+
+class Token{
+    name
+}
+
 class Currency{}
 class NFT{}
 
@@ -45,11 +57,13 @@ class LinuxService{}
 SystemService <|-- WinService
 SystemService <|-- LinuxService
 
+Member <|-- User
 Token <|-- Currency
 Token <|-- NFT
 
 Wallet -up-> Currency
+Wallet -left-> Member
 Transaction --> TransactionBatch
 Transaction --> Currency
 
-Wallet <|-- TokensBag
+Wallet --|> TokensBag

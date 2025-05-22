@@ -9,6 +9,7 @@ from aiogram.filters import IS_MEMBER, IS_NOT_MEMBER, ChatMemberUpdatedFilter, J
 from argparse import ArgumentParser
 from aiogram.enums.chat_type import ChatType
 from aiogram.types import ChatMemberUpdated
+from ..migrations.marat1 import migration
 
 
 class TelegramBot(Worker):
@@ -18,6 +19,9 @@ class TelegramBot(Worker):
     config:object
 
     def __init__(self, config:object):
+
+        migration()
+
         self.bot_token = config.bot_token
         self.config = config
         self.bot = Bot(self.bot_token)        
