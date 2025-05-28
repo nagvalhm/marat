@@ -1,0 +1,28 @@
+{
+    // "python.pythonPath": "${workspaceFolder}/pyt1/env310/Scripts/python.exe",
+    "python_path": "${workspaceFolder}/pyt/env310/Scripts/python.exe",
+    "cwd": "${workspaceFolder}/pyt",
+    "files.watcherExclude": {
+        "**/target": true
+    },
+    // "python.linting.mypyEnabled": true,
+    "python.linting.enabled": true
+    
+}
+
+//python 3.10.1
+//pip install virtualenv
+//python -m virtualenv pyt1/env310 -p D:\python\python310\python.exe
+//set-executionpolicy remotesigned
+//python -m pip install --upgrade pip
+//needed to select enviroment in vscode, when it asks while starting vscode
+//"terminal.integrated.cwd": "${workspaceFolder}/pyt1"
+
+//pip install poetry=1.1.13
+//poetry install
+
+//how to install module, -D nedded if dev dependency:
+//poetry add module_name=version -D
+
+//postgres database_name, username, pasword, port:
+// postgres, postgres, postgres, 5432 

@@ -16,12 +16,12 @@ if __name__ == '__main__':
     # config = {'bot_token': args.token}
 
     config = Config()
-    if hasattr(args, 'token'):
+    if hasattr(args, 'token') and args.token:
         config.bot_token = args.token
-    if hasattr(args, 'config'):
+    if hasattr(args, 'config') and args.config:
         config = IniFile(args.config)
 
-    GresDb('postgres://postgres:postgres@localhost:5432',
+    GresDb(config.db_conn_str,
         log_level=3, 
         default_namespace='marat').connect()
     

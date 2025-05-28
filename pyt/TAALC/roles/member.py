@@ -1,6 +1,6 @@
 from epure import epure
 from uuid import UUID
 
-epure()
+# @epure()
 class Member:
-    telegram_id: UUID
+    telegram_id: int
