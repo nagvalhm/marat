@@ -1,3 +1,4 @@
+from __future__ import annotations
 from .token import Token
 from epure import epure
 from typing import List
@@ -8,7 +9,7 @@ class Currency(Token):
     aliases: List[str]
 
     @classmethod
-    def currencies(cls):
+    def currencies(cls) -> List[Currency]:
         if not cls._currencies:
             cls._currencies = Currency.resource.read()
         return cls._currencies

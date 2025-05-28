@@ -23,3 +23,4 @@ class Transaction():
         self.sent_to = sent_to
         self.currency = currency
         self.amount = amount
+        self.transaction_time = datetime.now()

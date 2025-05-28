@@ -13,9 +13,12 @@ def migration():
 
     honey = Currency.resource.read(name='Honey')
     if not honey:
-        honey = Currency(name='Honey').save()
+        honey = Currency(name='Honey', \
+                        aliases=['медок','медка', 'медку', 'медок', 'медком', 'медке']).save()
         honey = Currency.resource.read(name='Honey')
     honey = honey[0]
+    honey.aliases=['медок','медка', 'медку', 'медок', 'медком', 'медке']
+    honey.save()
 
     marat = User.resource.read(telegram_id=7790094619)
     if not marat:
