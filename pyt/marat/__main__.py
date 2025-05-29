@@ -1,8 +1,10 @@
-from .bots.telegram_bot import TelegramBot
+from TAALC import TaalcBot
 from epure.files import IniFile
 import asyncio
 import argparse
 from epure.dbs import GresDb
+from .handlers.finance import *
+from .handlers.administration import *
 
 class Config:
     pass
@@ -21,9 +23,10 @@ if __name__ == '__main__':
     if hasattr(args, 'config') and args.config:
         config = IniFile(args.config)
 
-    GresDb(config.db_conn_str,
+    db = GresDb(config.db_conn_str,
         log_level=3, 
-        default_namespace='marat').connect()
+        default_namespace='marat')
+    db.connect()
     
-    bot = TelegramBot(config)
-    asyncio.run(bot.start())
+    bot = TaalcBot(config.bot_token, db, config, error_prefix='Ты несешь какую то дичь')
+    bot.start()

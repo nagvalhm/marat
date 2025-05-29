@@ -802,6 +802,22 @@ files = [
 typing-extensions = ">=4.6.0,<4.7.0 || >4.7.0"
 
 [[package]]
+name = "taalc"
+version = "0.1.11"
+description = ""
+optional = false
+python-versions = "<4.0,>=3.10"
+groups = ["main"]
+files = [
+    {file = "taalc-0.1.11-py3-none-any.whl", hash = "sha256:15ceda687f27626f831461a41c353dbc499760fc71b3358e359453c9ee12ac74"},
+    {file = "taalc-0.1.11.tar.gz", hash = "sha256:fb0a8d8674b9d33dac7dd6446a6790bf56f828b929fc32ff4250b064aee69a1d"},
+]
+
+[package.dependencies]
+aiogram = ">=3.20.0.post0,<4.0.0"
+epure = ">=0.3.12,<0.4.0"
+
+[[package]]
 name = "typing-extensions"
 version = "4.13.2"
 description = "Backported and Experimental Type Hints for Python 3.8+"
@@ -950,4 +966,4 @@ propcache = ">=0.2.1"
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "b70dfe7b30e0eb73702c1a9f199a25d5f4bd00377bab40293eb543134ddfc85c"
+content-hash = "93d7d87c5c9675fcecb0a1dfea33ce2fd1d1532e43da4059f266cd97b89c4e8a"
