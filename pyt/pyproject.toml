@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "TAALC"
-version = "0.1.8"
+name = "marat"
+version = "0.1.0"
 description = ""
-authors = ["Nikita Umerov <nagvalhm@yandex.ru>", "Pavel Pichugin"]
+authors = ["Nikita Umerov <nagvalhm@yandex.ru>"]
 readme = "README.md"
 # requires-python = "<=3.10.1"
 
@@ -20,5 +20,5 @@ aiogram = "^3.20.0.post0"
 
 
 [tool.poetry.urls]
-Homepage = "https://github.com/Pavelpich/TAALC"
-Source = "https://github.com/Pavelpich/TAALC"
+Homepage = "https://github.com/nagvalhm/marat"
+Source = "https://github.com/nagvalhm/marat"
