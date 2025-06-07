@@ -26,4 +26,4 @@
 
 //postgres database_name, username, pasword, port:
 // postgres, postgres, postgres, 5432 
-//poetry add <package> --no-cache
+//poetry update taalc --no-cache

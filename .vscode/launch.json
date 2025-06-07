@@ -26,7 +26,7 @@
             "justMyCode": false,
             // "justMyCode": true,
             "module": "pytest",
-            "args": ["pyt/tests/"],
+            "args": ["pyt/marat/tests/"],
             "console": "integratedTerminal",
             "python": "${config:python_path}",
             // "cwd": "${config:cwd}" not used because test.ini shared with js project

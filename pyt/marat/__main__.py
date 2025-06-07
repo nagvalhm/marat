@@ -3,11 +3,21 @@ from epure.files import IniFile
 import asyncio
 import argparse
 from epure.dbs import GresDb
+from .handlers.general import *
 from .handlers.finance import *
 from .handlers.administration import *
 
 class Config:
     pass
+
+def get_bot(config):
+    db = GresDb(config.db_conn_str,
+        log_level=config.log_level, 
+        default_namespace=config.default_namespace)
+    db.connect()
+    
+    bot = TaalcBot(config.bot_token, db, config)    
+    return bot
 
 if __name__ == '__main__':
     # config = IniFile('./pyconfig.ini')    
@@ -23,10 +33,5 @@ if __name__ == '__main__':
     if hasattr(args, 'config') and args.config:
         config = IniFile(args.config)
 
-    db = GresDb(config.db_conn_str,
-        log_level=3, 
-        default_namespace='marat')
-    db.connect()
-    
-    bot = TaalcBot(config.bot_token, db, config, error_prefix='Ты несешь какую то дичь')
+    bot = get_bot(config)
     bot.start()
