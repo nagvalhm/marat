@@ -917,14 +917,14 @@ testing = ["coverage (>=6.2)", "hypothesis (>=5.7.1)"]
 
 [[package]]
 name = "taalc"
-version = "0.1.27"
+version = "0.1.31"
 description = ""
 optional = false
 python-versions = "<4.0,>=3.10"
 groups = ["main"]
 files = [
-    {file = "taalc-0.1.27-py3-none-any.whl", hash = "sha256:c5a3e14758030303832a13cc2882f6ef53557bbda18591931313e0d9bcfa1c73"},
-    {file = "taalc-0.1.27.tar.gz", hash = "sha256:e2d41e687fc7d876e5795ef85a8bc5a8ab3ddbffc3ddbc7547f350ef3f97de3b"},
+    {file = "taalc-0.1.31-py3-none-any.whl", hash = "sha256:3b6cdb9b407f802eb1c44a0c27b6a8f73d50a1fb0fa2958b876f38d53d53a2ec"},
+    {file = "taalc-0.1.31.tar.gz", hash = "sha256:4e0288a3ce2bd9840d658062b3f8ec710fe129c3837012c4167108becc3b3ec3"},
 ]
 
 [package.dependencies]

@@ -22,20 +22,20 @@ async def give_currency(message: types.Message, user: TUser, match):
     currency = Currency.get_by_alias(cur_alias)
     amount = float(msg_split[-2])
     wallet_amount = user.wallet.amount(currency)
-    if amount <= 0 or wallet_amount <= 0:
-        await message.reply('А нахуй сходить не хочешь?')
-        return
+    if amount <= 0:
+        return await message.reply('А нахуй сходить не хочешь?')
+        
     
     if amount > wallet_amount:
         res = f"У тебя нет столько {currency.aliases[1]}, кого ты пытаешься наебать? "+\
             f"У тебя всего лишь {wallet_amount} грамм, иди поработай жопой, нищук."
-        await message.reply(res)
-        return
+        return await message.reply(res)
+        
 
     to_user = TUser.user_by_tg_user(message.reply_to_message.from_user)
     transaction = user.send_currency(to_user, currency, amount)
 
-    await message.reply_to_message.reply(f"{to_user}, {user} передал тебе {currency.aliases[1]}, "+ \
+    return await message.reply_to_message.reply(f"{to_user}, {user} передал тебе {currency.aliases[1]}, "+ \
                         f"{amount} грамм, запрвляй баян")
 
 
@@ -61,4 +61,4 @@ async def check_ballance(message: types.Message, user: TUser, match):
     else:
         res += f'Похоже петушок {checked_user} неплохо работает жопой!'
 
-    await message.reply(res)
+    return await message.reply(res)

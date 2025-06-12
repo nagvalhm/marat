@@ -6,11 +6,14 @@ from epure.dbs import GresDb
 from .handlers.general import *
 from .handlers.finance import *
 from .handlers.administration import *
+from .handlers.bidding import *
 
 class Config:
     pass
 
 def get_bot(config):
+    from TAALC.bidding.message_offer import MessageOffer
+    from TAALC.finance.message_nft_token import MessageNftToken
     db = GresDb(config.db_conn_str,
         log_level=config.log_level, 
         default_namespace=config.default_namespace)
